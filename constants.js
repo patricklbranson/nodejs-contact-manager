@@ -13,3 +13,11 @@
  *  See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+exports.constants = {
+  VALIDATION_ERROR: 400,
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+  NOT_FOUND: 404,
+  SEVER_ERROR: 500,
+};
