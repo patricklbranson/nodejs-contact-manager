@@ -107,10 +107,10 @@ const deleteContact = asyncHandler(async (req, res) => {
     );
   }
 
-  // API NOTE: The tutorial is wrong about the @code { await Contact.remove(); } ine of code
+  // API NOTE: The tutorial is wrong about the @code { await Contact.remove(); } line of code
   // It is possible it has changed since the development of the API. It is @code{ await Contact.deleteOne(); }
   // Source: https://mongoosejs.com/docs/api/model.html#Model.prototype.deleteOne()
-  await Contact.deleteOne({ _id: req.params.id }); // Note: the id was added after token was established it was empty parameters before
+  await Contact.deleteOne({ _id: req.params.id }); // Note: the id was added after token was established it was empty parameters beforehand
   res.status(200).json(contact);
 });
 
