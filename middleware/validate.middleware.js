@@ -38,4 +38,4 @@ const validateToken = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { validateToken };
+module.exports = validateToken;
