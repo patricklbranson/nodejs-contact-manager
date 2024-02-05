@@ -13,3 +13,28 @@
  *  See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+const mongoose = require("mongoose");
+
+const userSchema = mongoose.Schema(
+  {
+    username: {
+      type: String,
+      required: [true, "Please add username"],
+    },
+    email: {
+      type: String,
+      unique: [true, "Email address already taken"],
+      required: [true, "Please add the user email address"],
+    },
+    password: {
+      type: String,
+      required: [true, "Please add the User password"],
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+module.exports = mongoose.model("User", userSchema);
